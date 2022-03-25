@@ -2,7 +2,7 @@
  * Var_01.java 파일이 src/com/minuk0506/var 폴더에
  * 저장되어 있다 라는 표식
  */
-package com.minuk0506.var;
+package com.callor.var;
 
 // class 선언문, class prototype
 public class Var_01 {

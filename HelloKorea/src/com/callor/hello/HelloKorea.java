@@ -1,4 +1,4 @@
-package com.minuk0506.hello;
+package com.callor.hello;
 
 public class HelloKorea {
 

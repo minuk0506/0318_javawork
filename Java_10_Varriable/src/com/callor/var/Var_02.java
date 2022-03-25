@@ -1,4 +1,4 @@
-package com.minuk0506.var;
+package com.callor.var;
 
 public class Var_02 {
 	public static void main(String[] args) {
