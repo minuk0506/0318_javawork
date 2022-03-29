@@ -1,0 +1,221 @@
+0318 [
+
+    Git Bash : git-hub와 프로젝트를 연동할때 사용하는 작은 command 도구, Linux 명령체계와 유사
+    윈도우에서 Linux 기본 명령을 연습할 수 있다
+    =Linux Bourne shell
+
+    윈도우 cmd : 윈도우에서 마우스를 사용하지 않고 키보드로 명령을 입력하여 어떤 기능을 수행할때 사용하는 도구
+
+    Linux Command Shell : Linux 운영체제에서 키보드로 명령을 입력하여 어떤 기능을 수행할때 사용하는 명령입력창(window)
+
+
+    git-bash명령
+
+    방향키↑ : 이전명령, 방향키↓ : 최신명령, shift + insert : 붙여넣기
+
+    $ : prompt : 명령을 내리면(명령입력후 Emter)
+    명령을 수행할 준비가 되었다 라는 표식
+
+    clear : 현재 화면의 메시지를 지우는 명령
+
+    git-hub에 처음 올리기 위해 하는 git-bash 절차
+    git config --global user.name 유저이름
+    git config --global user.email 유저이메일
+    (내 이름과 이메일을 글로벌로(git에) 등록해 놓겠다)
+
+    github.com에 repository 생성
+
+    git init : git local 저장소 설정(초기화, 신청)
+
+    git add README.md -> git add . : 현재폴더의 모든파일, 모든폴더(.)를 압축하여 .git 폴더에 저장해달라
+
+    git commit -m first(first는 폴더옆에 이름)
+
+    git branch -M master : 권한을 마스터로 설정(기본값 마스터라 안해도됨)
+
+    git remote add origin https://github.com/유저이름/repository이름.git
+    (여기 스펠링이라도 틀리면 .git 폴더 지우고 처음부터 다시해야됨)
+    (git remote add 원격저장소이름 원격저장소url)
+
+    git push -u origin master
+    {master(브랜치)로 origin(원격저장소)에 push(저장한다)}
+
+    rm -rf .git : local repository(.git) 삭제 - 복구불가(위험)
+    rm(remove약자)
+
+    (.md 마크다운) README.md로 해야 git에서 보임
+
+    툴 자체에서 연동해 올리는 건 오류나 원하지 않는 코드 등록 등으로 권장하지 않음
+    github.com에서 아직 파일 수정 하지 않기
+
+    한번 설정하면 변경하기 전까진 
+    add commit push 절차만 거치면됨
+
+    git clone 깃허브repository주소 (주소뒤에 뭔갈 붙이면 그 이름으로 폴더 만들기) : repository내용을 복사해서 다운로드함
+
+    git pull origin master : 동기화 (한 repository를 두 곳 이상에서 쓸 때 A컴퓨터에서 수정한 내용을 B컴퓨터에도 적용시킬때 B컴퓨터에서 사용하는 명령어)
+
+    eclipse.ini파일 editor로 열어서 자바 bin폴더 경로를 -vm(14번줄) 밑에 붙여넣기
+    C:\Program Files\Java\jdk-11.0.14\bin(자바 bin폴더경로)
+
+    touch .gitignore(파일이름) : github 업로드 제외 설정
+    강사님 repository에 Reference에 .gitignore 복사해서 내 .gitignore파일 서브라임텍스트로 열어 붙여넣기
+    (.gitignore 파일을 editor로 열기, 업로드 예외 파일 리스트 작성 후 저장)
+
+    github에서 clone등으로 받은 파일 바로 안열림(import로 어케해야됨)
+
+]
+
+0321 [
+    VCS (Version Control System)
+        소스코드의 변경 시점 관리
+        어떤 내용을 누가 어느 시점에 변경했는지 관리
+        git, svn 등이 많이 사용됨
+
+    명령어 : 
+        git bash : ls (리스트) 현재 폴더에 항목을 보여줌
+            ls -al 올 리스트
+        cmd : dir 현재 폴더에 항목을 보여줌
+
+        git bash : clear 현재창 깨끗히
+        cmd : cls 현재창 깨끗히
+
+        git bash : cd  (체인지디렉토리) 현재 위치 이동
+        cmd : cd  현재 위치 이동
+        cd ..\.. 같이 한번에 여러번 이동 가능 (bash는/ cmd는\)
+
+        git bash : * 모든 것
+        ex)web, web0317이라는 폴더가 있을때
+        rm -rf web*하면 둘다 삭제됨
+
+        git bash : javac 파일이름 - 자바파일 컴파일 시키기
+            java 파일이름 - 컴파일된 자바파일 실행
+]
+
+0322 [
+    IDE : 통합개발환경 (Intergrated Development Environment)
+        소스코드작성, 컴파일, 테스트, 배포 등을 하나의 프로그램에서
+        처리할 수 있도록 만들어진 개발도구
+]
+
+0323 [
+    컴파일(Compile)
+        Text type으로 작성된 소스코드를 컴퓨터에 주입하기 위해 BIN(이진수) 코드로 변환하는 것
+    컴파일러(Compiler)
+        소스코드를 컴파일하는 소프트웨어
+
+class 선언문, class prototype
+public class Var_01 {
+	
+	여기에서 부터 실제 명령문 코드가 작성되는 곳
+	public static void main(String[] args) {
+		
+	코드에서 사용하는 수의 체계
+	정수, 실수
+	정수형(int type), 실수형(float type)
+		
+	int : 정수형 데이터를 저장할 기억장소를 예약해달라
+	num1 : 예약한 기억장소에 쉬운 num1 이라는 이름을 붙여라
+	= 30 : 예약된 num1 기억장소에 30을 저장(할당)
+	정수형 변수 num1 을 선언하고 정수 255 값으로 초기화 하라
+	정수형 변수 num2 를 선언하고 정수 88 값으로 초기화 하라
+	
+    int num1 = 255;
+	int num2 = 88;
+		
+	System.out.println(num1+num2);
+	System.out.println(num1*num2);
+	System.out.println(num2-num1);
+	System.out.println(num2/num1);
+		
+		
+	System.out.println(40.0/30.0);
+		
+	키워드(int) : 저장될 데이터가 어떤형식인가
+	변수(num4) : 우리가 데이터를 저장할 기억장소의 이름이다
+	num3 = 40; : num3에 40을 대입, 할당하라 
+	 
+	선언 만 된 변수에서는 값을 읽을 수 없다
+	반드시 앞에서 어떤 값이라도 저장, 할당을 해야만 이후에 읽을 수 있다
+			
+	정수형 변수 num3, num4 를 선언 "만" 하기
+	int num3;
+	int num4;
+	
+	선언된 정수형변수 num3, num4 에 정수 40을 대입하기
+	대입, 할당, 저장
+	num3 = 40;
+	num4 = 100;
+		
+	System.out.println(num3 + num4);
+		
+	변수에 어떤 값을 저장해야할지 아직 정해지지 않았을 때는
+	숫자일 경우는 0으로 초기화를 해 둔다
+	int num5 = 0;
+	System.out.println(num5);
+		
+	이름이 같은 변수는 선언불가
+	int num1 = 0; (num1 이라는 이름의 변수는 위에서 선언했음)
+	int num11a_ = 0;
+		
+    변수 명명규칙과 패턴
+	1. 첫글자는 무조건 소문자 (규칙)
+	2. 이후에는 대소문, 숫자, _ 를 조합할 수 있다 (규칙)
+	3. 두개 이상의 단어를 조합하여 만드는 것이 좋다 (패턴)
+	4. 두개 이상의 단어를 조합할때 두번째 단어부터 첫글자는 대문자 
+	 	=> camel case (패턴)
+	5. 두개 이상의 단어를 조합할때 첫번째 단어는 변수의 type으로 만드는 것이 좋다 
+	 	=> 헝가리언 표기법(패턴)
+	int a = 0; 같이 선언하면 코드가 커졌을때 절대 못 찾음
+		 
+	int intNum1 = 0;
+		
+	좋은 변수 이름 짓기
+	변수명이 길어지더라도 2개 이상의 단어를 조합하자
+	변수명만 보고 어떤 데이터가 담겨있는지 유추할 수 있도록 하자
+
+]
+
+0324 [ Project : Java_10_Varriable_02
+package : com.callor.Var
+Class : Var_01.Java
+수행과제
+두개의 정수형 변수를 선언하고
+각각 55와33을 저장
+두 정수형 변수에 저장된 값을 사용하여 4칙연산을 수행하고
+결과를 Console에 출력
+
+]
+
+0325 [
+    자바(Java) 언어의 특징
+    1. 완전한 객체지향 언어이다
+    2. 운영체제 독립적이다
+    3. 비교적 배우기 쉽다
+    4. 자동 메모리 관리(Gabage Collection)가 된다
+    5. 네트워크와 분산처리를 지원한다
+    6. 멀티 쓰레드를 지원한다
+    7. 동적 로딩(Dynamic Loading)을 지원한다
+]
+
+0328 [
+    프로그래머, 개발자 (Programmer, Developer)
+    코드작성, 분석 및 구현, 디버깅, 컴파일, 테스트 및 구현을 통해 원하는 출력물을 
+    만들어내는 일
+    시스템이 제대로 작동되기 위한 모든 다양한 요소를 다룰 수 있는 영역
+    다양한 유형의 복잡한 시나리오와 프로그램을 다룬다
+    문제에 대한 솔루션을 개념화하고 분석한 다음 문제 해결 방법을 결정.
+    사소한 문제로 인해 발생할 수 있는 것들을 발견하고 예방한다
+    코드분석, 패턴 디자인 등을 연구하고 습득 향상 시킨다
+]
+
+0329 [
+    method : 메소드, 메서드, 함수(function)
+        - jdk에서 지원하지 않는 여러 명령문을 그룹으로 묶어 새로운 명령(어) 처럼 사용한다
+        method를 사용(실행) 하려면 먼저 method 가 정의 되어야 한다
+        public int num(){
+          return 100;
+        }
+        - method 의 실행 결과를 다른 변수에 저장 할 수 있다
+        int result = num();
+]
