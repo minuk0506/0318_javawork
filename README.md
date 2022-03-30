@@ -1,6 +1,18 @@
 # 0318_javawork
 ## 2022-03-18 프로젝트 시작
 
+### :rabbit:[변수 만들기, 구구단, method, 키워드, 빠른 사칙연산](https://github.com/minuk0506/javawork/tree/master/Java_10_Varriable_03)
+* 변수 만들기(선언, 이름 등)
+* 구구단 기초연산으로 만들기
+* method
+* 키워드
+* 빠른 사칙연산
+
+### :dog:[main() 이외의 method만들기, 실수형 변수](https://github.com/minuk0506/javawork/tree/master/Java_10_Varriable_04)
+* 2022-03-28
+* main() 이외의 method 만들기
+* 실수형 변수
+
 ### :hamster:[문자열형 변수](https://github.com/minuk0506/javawork/tree/master/Java_10_Varriable_05)
 * 2022-03-29
 * 문자열형 변수 선언하기
