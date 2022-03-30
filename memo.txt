@@ -176,17 +176,6 @@ public class Var_01 {
 
 ]
 
-0324 [ Project : Java_10_Varriable_02
-package : com.callor.Var
-Class : Var_01.Java
-수행과제
-두개의 정수형 변수를 선언하고
-각각 55와33을 저장
-두 정수형 변수에 저장된 값을 사용하여 4칙연산을 수행하고
-결과를 Console에 출력
-
-]
-
 0325 [
     자바(Java) 언어의 특징
     1. 완전한 객체지향 언어이다
@@ -218,4 +207,19 @@ Class : Var_01.Java
         }
         - method 의 실행 결과를 다른 변수에 저장 할 수 있다
         int result = num();
+]
+
+0303[
+    JDK ( Java Developement Kit )
+    - Java 언어를 base로 하여 Application 을 개발하는데
+        활용할 수 있는 미리 준비된 class, method 들의 모음.
+    - 마치 모형 Kit를 조립하는 것처럼, 아이디어를 현실화 할 수 있는 매우 다양한
+        기능들이 이미 준비되어 있음.
+    - JDK의 도구만 잘 사용하여도, 아이디어를 Application 으로 충분히 구현할 수 있음.
+    - JDK 11 기준 14,500 여개는 소스코드도 공개되어 있음.
+
+    산술연산
+    비교연산
+    ALU
+    레지스터
 ]
