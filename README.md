@@ -1,6 +1,11 @@
 # 0318_javawork
 ## 2022-03-18 프로젝트 시작
 
+### :tiger:[변수1](https://github.com/minuk0506/javawork/tree/master/Java_10_Varriable)
+### :tiger:[변수2](https://github.com/minuk0506/javawork/tree/master/Java_10_Varriable_02)
+* 변수 (기초)
+
+
 ### :rabbit:[변수 만들기, 구구단, method, 키워드, 빠른 사칙연산](https://github.com/minuk0506/javawork/tree/master/Java_10_Varriable_03)
 * 변수 만들기(선언, 이름 등)
 * 구구단 기초연산으로 만들기
