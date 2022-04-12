@@ -1,6 +1,6 @@
 package com.callor.arrays;
 
-public class ArrayV5 {
+public class ArraysV5 {
 	public static void main(String[] args) {
 		
 		/*
