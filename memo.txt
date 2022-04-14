@@ -432,3 +432,15 @@ public class Var_01 {
     - for() 명령문에 선언된 변수 i 와 for() 명령 블럭( { } )에 선언된 intSum은
     for() 명령문 블럭( { } )이 끝나면 사용할 수 없다.
 ]
+0414[
+    클래스, 변수, 메서드 및 속성 이름 작명 코딩 패턴 : 이름작성 Case 패턴
+    1. 표준(lower)Camel Case : myName
+    2. Upper Camel Case : ServiceV1, ScoreService, StudentService
+    3. Kebab case : my-name, ham-button, top-menu
+    4. 헝가리언 표기법 : intKor, strNation, bYes
+    5. snack case (Underscore notation) : my_name
+    6. Upper Case format(시스템, 전역변수 사용) : MY_PROJECT_USER_NAME
+
+    자바책에서 학습한 내용 : 챕터(1, 2, 3, 4, 5, 7, 9, 11)
+    오늘 하는 내용 10장
+]
