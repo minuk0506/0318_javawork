@@ -443,4 +443,30 @@ public class Var_01 {
 
     자바책에서 학습한 내용 : 챕터(1, 2, 3, 4, 5, 7, 9, 11)
     오늘 하는 내용 10장
+
+    https://callor.com:12100
+    callor88@네이버
+    !aa1234
+]
+0415[
+    생성자 method
+    1. 클래스를 사용하여 객체(object) 선언 후 인스턴스화 할때 호출하는 method
+    2. 생성자 method는 return type(void, int, String 등)이 없다
+    3. 클래스 이름과 같다.(첫글자 대문자)
+    4. 클래스를 선언하면 "기본 생성자"는 자동으로 선언된다
+    5. "임의 생성자"를 선언하면 기본 생성자를 선언해 주어야 한다.
+    6. 생성자에서는 인스턴스변수(클래스 영역의 변수)를 초기화 하는 코드가 포함된다
+
+    public class ServiceV1{
+    private String[] students;
+
+    //기본생성자
+    public ServiceV1(){
+        this(10);
+    }
+    //임의생성자
+    public ServiceV1(int length){
+        students = new String[length];
+    }
+    }
 ]
