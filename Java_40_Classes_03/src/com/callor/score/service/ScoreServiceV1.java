@@ -6,6 +6,12 @@ import com.callor.score.utils.Line;
 public class ScoreServiceV1 {
 
 	private ScoreV2VO[] scores;
+	private int sumKor;
+	private int sumEng;
+	private int sumMath;
+	private int sumSum;
+	private float sumfAvg;
+	private int intStudent;
 	
 	public ScoreServiceV1() {
 		this(10);
@@ -32,6 +38,7 @@ public class ScoreServiceV1 {
 	
 	public void makeScore() {
 		
+		
 		for(int i = 0; i < scores.length; i++) {
 			int intKor = (int)(Math.random() * 50) + 51;
 			int intEng = (int)(Math.random() * 50) + 51;
@@ -40,27 +47,16 @@ public class ScoreServiceV1 {
 			scores[i].setIntKor(intKor);
 			scores[i].setIntEng(intEng);
 			scores[i].setIntMath(intMath);
-		}	
-	}
-	public void sumScore() {
-		int sumKor = 0;
-		int sumEng = 0;
-		int sumMath = 0;
-		int sumSum = 0;
-		float sumfAvg = 0;
-		int intStudent = 0;
-		for(int i = 0; i < scores.length; i++) {
+			
 			sumKor += scores[i].getIntKor();
 			sumEng += scores[i].getIntEng();
 			sumMath += scores[i].getIntMath();
 			sumSum += scores[i].getIntSum();
 			sumfAvg += scores[i].getfAvg();
 			intStudent = i+1;
-		}
+		}	
 		sumfAvg /= intStudent;
-		System.out.printf("  계\t%d\t%d\t%d\t%d\t%3.2f", sumKor, sumEng, sumMath, sumSum, sumfAvg);
 	}
-	
 	public void printScore() {
 		System.out.println(Line.dLine(50));
 		System.out.println("빛나고교 성적표 v1");
@@ -78,6 +74,7 @@ public class ScoreServiceV1 {
 			
 		}
 		System.out.println(Line.sLine(50));
+		System.out.printf("  계\t%d\t%d\t%d\t%d\t%3.2f", sumKor, sumEng, sumMath, sumSum, sumfAvg);
 		
 		
 	}

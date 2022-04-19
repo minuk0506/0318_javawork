@@ -10,7 +10,6 @@ public class ScoreControllerV1 {
 		ScoreServiceV1 scService = new ScoreServiceV1(stNames);
 		scService.makeScore();
 		scService.printScore();
-		scService.sumScore();
 	}
 	/*
 	 *  총점, 총 평균 코드 만들기	
