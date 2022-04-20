@@ -5,7 +5,9 @@ import com.callor.score.utils.Line;
 
 public class ScoreServiceV1 {
 
-	private ScoreV2VO[] scores;
+	protected void name() {
+		
+	} ScoreV2VO[] scores;
 
 	public ScoreServiceV1() {
 		this(10);
