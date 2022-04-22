@@ -531,3 +531,18 @@ public class Var_01 {
     3. 추상화 등의 객체 설계를 하는데 많은 시간과 노력이 필요하다.
     설계를 잘 하지 못하면 절차 지향보다 프로젝트를 성공하기 어렵다.
 ]
+0422[
+    interface 를 사용한 class 다형성 구조
+
+    1. Java의 interface
+        1) 클래스를 정의하기 위한 설계로 역할을 수행하는 특별한 class
+        2) interface 를 implements(상속) 한 클래스는
+        interface에 정의된 모든 method를 반드시 선언(작성)해야 한다.
+    
+    2. interface 를 사용한 객체의 다형성
+        1) interface는 implements 한 클래스들의 Parent 이다
+        2) interface로 객체를 선언하고,
+        implements 한 클래스의 생성자로 인스턴스를 생성한다.
+        3) 업그레이드된 클래스를 사용하고자 하면 생성자만 교체하면
+        다른 코드는 그대로 사용가능하다.
+]
