@@ -546,3 +546,14 @@ public class Var_01 {
         3) 업그레이드된 클래스를 사용하고자 하면 생성자만 교체하면
         다른 코드는 그대로 사용가능하다.
 ]
+0425[
+    MVC(Model View Controller)패턴
+    1. 사용자가 컴퓨터를 통해 Request 를 하면
+    2. Model 을 통해 데이터를 가져오고
+    3. 그 정보를 바탕으로 view 에서 UI(시각적 표현)을 수행한다
+    4. Model View Controller 는 코드가 변경되더라도 상호간에 최소한의 영향만으로 프로젝트가 구현되어야 한다
+    5. View 는 사용자와 상호작용하며
+    6. Controller 는 데이터와 비즈니스 로직을 담당한다.
+
+    User -> REQUEST -> Controller -> MANUPLATES -> Model -> UPDATE -> View -> SEES -> User
+]
