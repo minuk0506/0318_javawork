@@ -25,13 +25,12 @@ public class Exec7 {
 		
 		for(index = 0 ; index < intNum.length ; index++) {
 			for(i = 2 ; i < intNum[index] ; i++) {
-				System.out.println("i의 값" + i + "\tindex의 값" + intNum[index]);
 				if(intNum[index] % i == 0) {
-					continue;
+					break;
 				} 
 			} 
-			if(intNum[index] < i){
-				break;
+			if(i+1 < intNum[index]){
+				continue;
 			} else {
 				intRsl += 1;
 				System.out.println("값" + intRsl);
