@@ -569,3 +569,32 @@ public class Var_01 {
     // System.out 클래스를 사용하여 os 객체 생성
     OutputStream os = System.out
 ]
+0427[
+    DBMS( DataBase Managiment System )
+    1. 많은 데이터를 스토리지에 보관하관리하는 소프트웨어
+    2. 스토리지에 보관된 많은 데이터 중에서 원하는 조건의 데이터를 쉽게 조회할 수 있게 구성된 소프트웨어
+
+    RDBMS( RelationShip DataBase Managiment System )
+    1. 관계형 데이터베이스 시스템
+    2. 많은 데이터를 관리하는 데이터베이스 소프트웨어중
+    모든 데이터를 "테이블" 이라는 관점으로 보여주는 시스템
+    3. SQL(Structed Query Lang.)명령어를 사용하여 데이터를 관리
+]
+0428[
+    SQL(Structed Query Lang.)
+    1. RDBMS 에 접근하기 위한 데이터베이스 코딩 언어
+    2. DDL, DML, DCL, TCL, 등이 있다
+    
+    DDL(Data Definition Lang.) 데이터 정의어
+    1. 데이터저장소, Table, 사용자, 인덱스 등 데이터베이스 객체(Object) 생성, 제거, 변경
+    2. CREATE : 생성, DROP : 제거, ALTER : 변경
+
+    DML(Data Manipulation Lang.) 데이터 조작어
+    1. 생성된 데이터 Table 을 기준으로 CRUD 실행
+    2. INSERT(Create, 추가), SELECT(Read, 조회), UPDATE(UPDATE, 변경), 
+    DELETE(Delete, 삭제)
+
+    DCL(Data Control Lang.) 데이터 제어어
+    1. 데이터베이스의 접근권한 등을 설정
+    2. GRANT : 권한 부여, REVOKE : 권한 회수
+]
