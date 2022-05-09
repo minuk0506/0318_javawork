@@ -646,3 +646,48 @@ public class Var_01 {
     4. 배열 요소에 "저장된" 각각의 객체는 다른 요소의 객체와 완전 독립적이다.
     5. 리스트 요소에 "추가된" 각각의 객체는 다른 요소의 객체와 완전 독립적이다.
 ]
+0504[
+    프레임 워크
+
+    1. 차, 비행기, 배 같은 탈것과 같은 잘 만들어진 "운송 수단"이라고 생각하면 된다.
+    
+    2. 여행을 하려면 운송 수단에 사람이 탑승하여 시동을 걸고, 기어를 넣고, 핸들을 작동하고, 운전을 해야 한다.
+
+    3. 하지만, 운송 수단은 서로 대체할 수 없다.
+    
+    4. 하늘을 날려면 비행기를 타야하고, 도로를 달리려면, 자동차가 훨씬 유용하다. 바다에서는 배를 타야만 한다.
+    
+    5. 애초에 그 목적에 맞게 만들어졌기 때문에, 톱이나 망치를 가지고 탈 것을 처음부터 직접 만들 필요를 없게 한다.
+    
+    6. 정해진 규칙에 따라 시동 걸고, 기어를 넣고, 핸들을 돌리기만 하면 된다.
+    
+    7. 즉, 프레임워크는 이미 프로그래밍할 규칙이 정해져 있는 클래스, 모듈을 활용하여 규칙에 맞도록 개발자의 아이디어를 구현하는데 도움을 줄 수 있는 도구이다.
+]
+0509[
+    SpringMVC패턴
+    클라이언트 -> HTTP요청 ->Dispatcher Servlet
+    -> 1. 핸들러조회 -> 핸들러매핑
+    -> 2. 핸들러를 처리할 수 있는 핸들러 어댑터 조회 -> 핸들러 어댑터 목록
+    -> 3. handle(handler) 핸들러 어댑터 -> 4. handler 호출 -> 핸들러(컨트롤러)
+    5. 핸들러어댑터 -> ModelAndView 반환 -> Dispatcher Servlet
+    -> 6. viewResolver 호출 -> viewResolver -> View반환 -> Dispatcher Servlet
+    -> 8. render(model) 호출 -> View -> HTML 응답
+
+    수행과제
+    Project:Java_60_App_02
+    Package:com.callor.app
+    1. 학생의 국어, 영어, 수학 점수를 저장 할 model.ScoreVO 클래스를 작성
+    2. 다음 method 를 포함하는
+    service.ScoreService 인터페이스 작성
+    void inputScore();
+    void saveScore();
+    3. service.impl.ScoreServiceImplV1 클래스 작성
+    ScoreService 인터페이스 상속 후 method 구현
+
+    수행과제
+    1. inputScore() method 에서
+    키보드로 학생의 이름, 국어, 영어, 수학점수를 입력받고
+    VO 객체에 담은 후 scList 에 추가
+    2. 학생의 이름을 입력받을 때 QUIT 를 입력하면 입력종료
+    3. QUIT 가 아닌경우 계속 입력받기
+]
