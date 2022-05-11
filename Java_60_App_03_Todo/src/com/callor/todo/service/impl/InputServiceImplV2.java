@@ -1,6 +1,6 @@
 package com.callor.todo.service.impl;
 
-import com.callor.utils.Line;
+import com.callor.todo.util.Line;
 
 public class InputServiceImplV2 extends InputServiceImplV1{
 

@@ -7,7 +7,7 @@ import com.callor.todo.service.InputService;
 import com.callor.todo.service.TodoService;
 import com.callor.todo.service.impl.InputServiceImplV2;
 import com.callor.todo.service.impl.TodoServiceImplV1;
-import com.callor.utils.Line;
+import com.callor.todo.util.Line;
 
 public class TodoControllerV12 {
 
@@ -40,13 +40,15 @@ public class TodoControllerV12 {
 				
 				while(true) {
 					System.out.println("완료할 할일을 선택하세요");
-					Integer num = inService.selectTodo();
+					Integer num = inService.selectTodo(); 
 					if(num == null) {
 						System.out.println("숫자로만 선택하세요");
 						continue;
 					}
-					if(num == -1) return;
+					if(num == -1) return; 
 					toService.compTodo(num);
+					printTodo(todoList);
+					
 				}
 			} // end if
 		} // end while
@@ -66,12 +68,11 @@ public class TodoControllerV12 {
 			System.out.print(toVO.get(i).getSdate() + "\t");
 			System.out.print(toVO.get(i).getStime() + "\t");
 			System.out.print(toVO.get(i).getTContent() + "\t");
-			
+
 			String comp = toVO.get(i).getEdate() == null ||
 					toVO.get(i).getEdate().isEmpty()
 					?"진행중" : "완료됨";
 			System.out.println(comp);
 		}
 	}
-
 }

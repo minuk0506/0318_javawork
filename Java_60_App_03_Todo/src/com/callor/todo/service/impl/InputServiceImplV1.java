@@ -3,7 +3,7 @@ package com.callor.todo.service.impl;
 import java.util.Scanner;
 
 import com.callor.todo.service.InputService;
-import com.callor.utils.Line;
+import com.callor.todo.util.Line;
 
 public class InputServiceImplV1 implements InputService{
 

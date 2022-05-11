@@ -14,13 +14,9 @@ public class ScoreVO {
 	 * 
 	 * scorePrint() method 에서 성적 리스트를 출력
 	 * 
-	 * =============================== 
-	 * 학번 국어 영어 수학 총점 평균
-	 * ------------------------------- 
-	 * 1 90 90 90 270 90.00
-	 *  : : : : : :
-	 * =============================== 
-	 * 총점 000 000 000 0000
+	 * =============================== 학번 국어 영어 수학 총점 평균
+	 * ------------------------------- 1 90 90 90 270 90.00 : : : : : :
+	 * =============================== 총점 000 000 000 0000
 	 */
 	private int scNum;
 	private int scKor;
@@ -32,7 +28,7 @@ public class ScoreVO {
 	public ScoreVO() {
 		// TODO Auto-generated constructor stub
 	}
-	
+
 	public ScoreVO(int scNum, int scKor, int scEng, int scMath, int scSum, float scAvg) {
 		super();
 		this.scNum = scNum;
@@ -93,8 +89,7 @@ public class ScoreVO {
 
 	@Override
 	public String toString() {
-		return scNum + "\t" + scKor + "\t" + scEng + "\t" + scMath + "\t"
-				+ scSum + "\t" + scAvg + "";
+		return scNum + "\t" + scKor + "\t" + scEng + "\t" + scMath + "\t" + scSum + "\t" + scAvg + "";
 	}
 
 }

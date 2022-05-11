@@ -94,11 +94,29 @@ public class TodoServiceImplV1 implements TodoService{
 	 * 매개변수로 전달받은 num 값은 List 요소의 실제 값보다 1만큼 크다
 	 * num 값이 4라면 실제로는 3번 요소를 선택한 것이다.
 	 * 
+	 * 입력한 값 위치에 있는 항목이 완료됨으로 변경됨
 	 * 선택한 요소의 edate, etime 부분을 현재 시스템의 날짜와 시간을 사용하여
 	 * 문자열로 바꾼다음 setting
 	 */
 	@Override
 	public void compTodo(Integer num) {
+		
+//		Date curDate = new Date(System.currentTimeMillis());
+//		
+//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+//		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+//		
+//		String edate = dateFormat.format(curDate);
+//		String etime = timeFormat.format(curDate);
+//		num--;
+//		todoList.get(num).setEdate(edate);
+//		todoList.get(num).setEtime(etime);
+		
+		num--;
+		Date curDate = new Date(System.currentTimeMillis());
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+		String today = dateFormat.format(curDate);
+		todoList.get(num).setEdate(today);
 		
 	}
 	
