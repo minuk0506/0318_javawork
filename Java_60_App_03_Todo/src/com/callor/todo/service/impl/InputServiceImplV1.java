@@ -7,7 +7,7 @@ import com.callor.utils.Line;
 
 public class InputServiceImplV1 implements InputService{
 
-	private final Scanner scan;
+	protected final Scanner scan;
 	public InputServiceImplV1() {
 		scan = new Scanner(System.in);
 	}
@@ -42,4 +42,9 @@ public class InputServiceImplV1 implements InputService{
 		return content;
 	}
 
+	@Override
+	public Integer selectTodo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
