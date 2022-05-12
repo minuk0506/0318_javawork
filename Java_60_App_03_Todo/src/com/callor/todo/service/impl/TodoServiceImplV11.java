@@ -1,6 +1,13 @@
 package com.callor.todo.service.impl;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -9,11 +16,18 @@ import java.util.UUID;
 import com.callor.todo.model.TodoVO;
 import com.callor.todo.service.TodoService;
 
-public class TodoServiceImplV1 implements TodoService{
+public class TodoServiceImplV11 implements TodoService{
 
-	private final List<TodoVO> todoList;
-	public TodoServiceImplV1() {
+	protected final String saveFileName;
+	protected final List<TodoVO> todoList;
+	public TodoServiceImplV11() {
+		this("src/com/callor/todo/model/todolist.txt");
+				
+	}
+	
+	public TodoServiceImplV11(String saveFileName) {
 		todoList = new ArrayList<>();
+		this.saveFileName = saveFileName;
 	}
 	
 	/*
@@ -84,9 +98,30 @@ public class TodoServiceImplV1 implements TodoService{
 	}
 
 	@Override
-	public void saveTodo(String fileName) {
-		// TODO Auto-generated method stub
+	public void saveTodo(String fileName) throws IOException {
 		
+		FileWriter writer = null;
+		PrintWriter out = null;
+		
+		writer = new FileWriter(saveFileName);
+		out = new PrintWriter(writer);
+		
+		for(TodoVO vo : todoList) {
+			out.printf("%s,", vo.getTKey());
+			out.printf("%s,", vo.getSdate());
+			out.printf("%s,", vo.getStime());
+			out.printf("%s,", vo.getEdate());
+			out.printf("%s,", vo.getEtime());
+			out.printf("%s\n", vo.getTContent());
+		}
+		// buffer 에 남아있는 데이터를 강제로 파일에 기록
+		out.flush();
+		
+		// 열려있는 파일 resource 를 닫기
+		// 파일에 저장하는 코드에서는
+		// 반드시 마지막에 close를 해야 한다
+		out.close();
+		writer.close();
 	}
 
 	/*
@@ -100,24 +135,44 @@ public class TodoServiceImplV1 implements TodoService{
 	 */
 	@Override
 	public void compTodo(Integer num) {
+		int index = num - 1;
+		// java 1.8 부터 사용하는 새로운 날짜 시간 관련 클래스
+		// Date, Calender 클래스의 날짜와 관련된 많은 이슈때문에
+		// 새롭게 디자인되고 만들어진 클래스이다
+		// 객체를 새로 생성하는 것이 아니고 
+		// now() 라는 static 메서드를 호출하여 가져다 쓰는 구조다
+		// 현재 시점의 날짜와 시간
+		LocalDateTime local = LocalDateTime.now(); // 날짜 시간 둘다
+		LocalDate localDate = LocalDate.now(); // 날짜만
+		LocalTime localTime = LocalTime.now(); // 시간만
 		
-		Date curDate = new Date(System.currentTimeMillis());
+		// 날짜형의 문자열로 변환하기
+		DateTimeFormatter toDateFormat 
+			= DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter toTimeFormat 
+			= DateTimeFormatter.ofPattern("hh:mm:ss");
 		
-		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-		SimpleDateFormat timeFormat = new SimpleDateFormat("hh:mm:ss");
+		String eDate = local.format(toDateFormat);
+		String eTime = local.format(toTimeFormat);
 		
-		String edate = dateFormat.format(curDate);
-		String etime = timeFormat.format(curDate);
-		num--;
-		todoList.get(num).setEdate(edate);
-		todoList.get(num).setEtime(etime);
-		
-//		num--;
-//		Date curDate = new Date(System.currentTimeMillis());
-//		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-//		String today = dateFormat.format(curDate);
-//		todoList.get(num).setEdate(today);
-		
+		try {
+			TodoVO tVO = todoList.get(index);
+			
+			// todo의 eDate 값이 null 이거나 "" 이면
+			// 위에서 만든 eDate(현재시각)을 그대로 다시 eDate에 담고
+			// 그렇지 않으면 eDate 에 null 을 담아라
+			
+			// 3항 연산자
+			// 조건에 따라 변수에 다른 값을 저장하고 싶을때
+			// 변수 = 조건 ? 참일때 : 거짓일때
+			eDate = tVO.getEdate() == null || tVO.getEdate().isEmpty()? eDate : null;
+			eTime = tVO.getEtime() == null || tVO.getEtime().isEmpty()? eTime : null;
+			
+			tVO.setEdate(eDate);
+			tVO.setEtime(eTime);
+		} catch (Exception e) {
+			System.out.println("TODO List 데이터 범위를 벗어났습니다.");
+		}
 	}
 	
 	

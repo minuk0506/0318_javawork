@@ -3,7 +3,7 @@ package com.callor.todo.service.impl;
 import java.util.Scanner;
 
 import com.callor.todo.service.InputService;
-import com.callor.todo.util.Line;
+import com.callor.utils.Line;
 
 public class InputServiceImplV1 implements InputService{
 
@@ -19,9 +19,10 @@ public class InputServiceImplV1 implements InputService{
 		System.out.println(Line.sLine(50));
 		System.out.println("1. TODO 추가하기");
 		System.out.println("2. TODO List 보기");
-		System.out.println("3. Key 로 검색하기");
+		System.out.println("3. TODO 변경하기");
 		System.out.println("4. 완료처리하기");
-		System.out.println("5. 종료하기");
+		System.out.println("5. 파일에 저장하기");
+		System.out.println("6. 종료하기");
 		System.out.println(Line.sLine(50));
 		System.out.print("선택 >> ");
 		String strMenu = scan.nextLine();
@@ -37,7 +38,7 @@ public class InputServiceImplV1 implements InputService{
 
 	@Override
 	public String inputContent() {
-		System.out.println("할일 >> ");
+		System.out.print("할일 >> ");
 		String content = scan.nextLine();
 		return content;
 	}
