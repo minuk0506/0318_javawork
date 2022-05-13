@@ -746,3 +746,16 @@ public class Var_01 {
     StudentVO stVO = new StudentVO();
     Service service = new ServiceImpl();
 ]
+0513[
+    PRIMARY KEY
+    1. 기본 키(PK)를 설정하여 데이터 조작에 유일한 절대성을 부여하는 것
+    2. 한 레코드의 데이터를 수정, 삭제하여도
+        다른 레코드에 영향을 미치지 않는다.
+        이를 무결성 유지 라고 한다
+    3. 기본키의 값은 유일(UNIQUE)해야 하며 NOT NULL 성질을 갖는다.
+    4. 자동으로 Unique Index 가 설정된다.
+    5. 한 개의 Table 에 1개만 존재한다.
+
+    다음주는 java 복습
+    복습내용 중에 다다음주 시험 문제가 나옴
+]

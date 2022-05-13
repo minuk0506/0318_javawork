@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Scanner;
 import java.util.UUID;
 
 import com.callor.todo.model.TodoVO;
@@ -91,10 +92,7 @@ public class TodoServiceImplV11 implements TodoService{
 		return null;
 	}
 
-	@Override
 	public void update(TodoVO tVO) {
-		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -173,6 +171,12 @@ public class TodoServiceImplV11 implements TodoService{
 		} catch (Exception e) {
 			System.out.println("TODO List 데이터 범위를 벗어났습니다.");
 		}
+	}
+
+	@Override
+	public void update(Integer num, String content) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

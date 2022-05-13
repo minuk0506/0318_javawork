@@ -34,6 +34,36 @@ public class TodoControllerV12 {
 			} else if (mainMenu == 2) {
 				List<TodoVO> todoList = toService.todoSelectAll();
 				printTodo(todoList);
+			} else if(mainMenu == 3) {
+				while(true){
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+					System.out.println(Line.dLine(60));
+					System.out.println("내용을 변경할 할일을 선택하세요");
+					Integer num = inService.selectTodo();
+					String content = inService.inputContent();
+					if(content.equals("QUIT"))break;
+					toService.update(num, content);
+					
+//					TodoVO tVO;
+//					try {
+//						tVO = todoList.get(num -1);
+//					} catch (Exception e) {
+//						System.out.println("할일 리스트를 잘못 선택");
+//						System.out.println("리스트 범위 넘어감");
+//						continue;
+//					}
+//					
+//					// 할일을 입력받고
+//					System.out.println(Line.dLine(60));
+//					System.out.println("변경내용 입력");
+//					System.out.println();
+//					String content = inService.inputContent();
+//					// 입력받은 내용을 선택한 Todo 에 반영하기
+//					tVO.setTContent(content);
+//					// num 이 입력받은 곳의 할일이 바뀌어야함
+					
+				}
 			} else if (mainMenu == 4) {	
 				while(true) {
 					List<TodoVO> todoList = toService.todoSelectAll();
@@ -53,7 +83,10 @@ public class TodoControllerV12 {
 			} else if(mainMenu == 5) {
 				toService.saveTodo(null);
 				
-			} // end if
+			} else if(mainMenu == 6){
+				System.out.println("업무종료");
+				break;
+			}	// end if
 		} // end while
 	}// end main
 

@@ -77,11 +77,6 @@ public class TodoServiceImplV1 implements TodoService{
 		return null;
 	}
 
-	@Override
-	public void update(TodoVO tVO) {
-		// TODO Auto-generated method stub
-		
-	}
 
 	@Override
 	public void saveTodo(String fileName) {
@@ -117,6 +112,12 @@ public class TodoServiceImplV1 implements TodoService{
 //		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
 //		String today = dateFormat.format(curDate);
 //		todoList.get(num).setEdate(today);
+		
+	}
+
+	@Override
+	public void update(Integer num, String content) {
+		// TODO Auto-generated method stub
 		
 	}
 	
