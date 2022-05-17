@@ -63,7 +63,8 @@ public class AddrEx05 {
 		addrs.set(2, adVO);
 		adService.printAddrList(addrs);
 		
-
+//TODO 0517과제부분
+		
 		System.out.println(Line.dLine(50));
 		for(int i = 0; i < addrs.size(); i++) {
 			for(int j = 0; j < addrs.size(); j++) {
