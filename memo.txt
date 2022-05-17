@@ -762,3 +762,16 @@ public class Var_01 {
 0516[
     클래스의 의존성 주입(DI) - IOC(제어의 역전)
 ]
+0517[
+    클래스의 의존성 주입(DI) 스프링 컨테이너
+    spring framework mvc 패턴에서는 프로젝트가 시작되면
+    @Component(@Controller,@Service) 로 설정된 클래스들을
+    각각의 이름으로 객체 인스턴스를 생성하여 준비해 놓는다.
+    객체가 필요한 곳이 있으면 ioc 컨테이너에서 객체를 주입해 준다.
+
+    시험범위는 Java_60_App_04 내용에서 나옴
+
+    0517과제 AddrEx05, AddServiceV1 나이순 정렬문제
+
+    선생님 깃허브 Java_30_Arrays_06 SortEx2 에 정렬관련있음
+]
