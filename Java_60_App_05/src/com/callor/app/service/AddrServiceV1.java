@@ -25,14 +25,17 @@ public class AddrServiceV1 {
 	}
 
 	public void printAddrList(List<AddressVO> addrs) {
-		for(AddressVO vo : addrs) {
-			System.out.println(addrs);
-		}
-		System.out.println(Line.sLine(50));
+//		for(AddressVO vo : addrs) {
+//			System.out.println(addrs);
+//		}
+//		System.out.println(Line.sLine(50));
+		
 		int size = addrs.size();
-		for(int i = 0; i < size; i++) {
-			System.out.println(addrs.get(i));
-		}
+		
+//		for(int i = 0; i < size; i++) {
+//			System.out.println(addrs.get(i));
+//		}
+		
 		System.out.println(Line.sLine(50));
 		for(int i = 0; i < size; i++) {
 			AddressVO vo = addrs.get(i);
