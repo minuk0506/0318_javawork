@@ -2,6 +2,7 @@ Ctrl + Shift + Enter : 자동 정렬(이클립스)
 (html에서는 안됨)
 font Awesome - icon사이트
 cdnjs - font Awesome 검색 - type All, JavaScript 첫번째 링크들 script로 추가
+aos - animate on scroll library : 애니메이션 제작 도와주는 사이트
 0318 [
 
     Git Bash : git-hub와 프로젝트를 연동할때 사용하는 작은 command 도구, Linux 명령체계와 유사
