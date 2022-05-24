@@ -37,7 +37,11 @@ public class AddrEx01 {
 		
 		System.out.printf("%s\n%s\n%s", hong, lee, sung);
 		
-		
+		AddressVO kong = new AddressVO();
+		kong.setName("kong");
+		kong.setAddr("서울");
+		kong.setTel("01012345678");
+		System.out.println(kong);
 	}
 	
 	
