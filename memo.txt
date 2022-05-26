@@ -872,5 +872,12 @@ public class Var_01 {
     나이스 opne api
     https://open.neis.go.kr/portal/data/service/selectServicePage.do?page=1&rows=10&sortColumn=&sortDirection=&infId=OPEN15920190423094641415608&infSeq=2
 
-    인증키 : ebd806fdca3043fa9fcd0c65ee839914
+    나이스 open api인증키 : ebd806fdca3043fa9fcd0c65ee839914
+]
+0526[
+                                데이터 무결성
+    도메인 무결성                 개체 무결성          참조 무결성
+check, not null, default /   primary key, unique  /   foreign key
+
+교재 Generic 클래스 인터페이스 확인
 ]
