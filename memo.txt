@@ -881,3 +881,19 @@ check, not null, default /   primary key, unique  /   foreign key
 
 교재 Generic 클래스 인터페이스 확인
 ]
+0527[
+    스택(Stack)
+    후입선출(Last in First out)
+    웹 브라우저 뒤로가기
+    함수, 메서드 호출 및 종료
+    실행취소
+    후위 표기법 계산
+    수식괄호 계산
+    
+    큐(Que)
+    선입선출
+    프로세스 관리
+    캐시 구현
+    우선순위가 같은 작업 예약(프린터의 인쇄 대기열)
+    너비 우선 탐색(BFS, Breadth-First Search) 구현
+]
