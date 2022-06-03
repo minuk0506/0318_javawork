@@ -910,3 +910,15 @@ check, not null, default /   primary key, unique  /   foreign key
     - 사용자가 요청(Request)을 하면 서버에서는 요청을 분석하여 적절한 비즈니스 로직을 수행하고 사용자에게 결과를 응답(Response)한다. 
     - 웹 브라우저, 웹 서버, 웹 어플리케이션 서버, 데이터베이스 서버 등이 통합된 환경으로 운영된다.
 ]
+0603[
+    JSP(Java Server Page)
+    - HTML 코드에 Java 코드를 추가하여 동적 웹페이지를 생성하는 웹 어플리케이션 구조
+    - JSP는 Java 코드로  transpile되며 다시 컴파일 되어 실행된다.
+    - JSP 코드가 Java 코드로 변환된 것을 "서블릿"이라고 한다.
+    - 근래에선 JSP를 직접 사용하지 않고, Java 코드를 이용하여 비즈니스 로직을 처리하고 JSP는 View의 용도로 한정되게 사용한다.
+     
+    Servlet(Server Applet)
+    - Java 언어로 작성된 서버 프로그램의 작은 조각들을 말한다.
+    - JSP 파일이 톰캣 등 Web Container에 의해 변환된 java 파일이다.
+    - 서블릿을 java 코드로 작성하기도 하는데 이때는 문자열 연산(+)을 수행하여 HTML코드를 Client로 보내는 일을 수행하기도 했었다.
+]
