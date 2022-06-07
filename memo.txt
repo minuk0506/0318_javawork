@@ -922,3 +922,19 @@ check, not null, default /   primary key, unique  /   foreign key
     - JSP 파일이 톰캣 등 Web Container에 의해 변환된 java 파일이다.
     - 서블릿을 java 코드로 작성하기도 하는데 이때는 문자열 연산(+)을 수행하여 HTML코드를 Client로 보내는 일을 수행하기도 했었다.
 ]
+0607[
+    목표
+    <a href="${rootPath}"/book/list>목록보기</a> 링크를 클릭하여
+    /view/book/list.jsp 열어보기
+
+    Controller 클래스 생성하기
+    @Controller
+    @RequestMapping(value="/book")
+    public class BookController{}
+
+    Method 생성하기
+    @RequestMapping(value="/list")
+    public String list(){
+    return "book/list";
+    }
+]
