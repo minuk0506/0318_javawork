@@ -938,3 +938,6 @@ check, not null, default /   primary key, unique  /   foreign key
     return "book/list";
     }
 ]
+0608[
+    Spring MVC패턴
+]
