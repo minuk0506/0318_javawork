@@ -957,3 +957,7 @@ check, not null, default /   primary key, unique  /   foreign key
 
     username, email 중복검사(과제)
 ]
+0610[
+    Data Table 데이터를 view 에서 보여주기
+    workspace/memo-DATA-view.PDF
+]
