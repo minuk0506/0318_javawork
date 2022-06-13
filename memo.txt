@@ -961,3 +961,17 @@ check, not null, default /   primary key, unique  /   foreign key
     Data Table 데이터를 view 에서 보여주기
     workspace/memo-DATA-view.PDF
 ]
+0613[
+    Response Code(http 오류 코드)
+    200: 데이터를 준비하고 있으니 기다려
+
+    302, 304: Redirect 할께
+
+    400: 매개변수 오류
+    401: 권한오류
+    403: 권한오류
+    404: 요청을 처리할 method 가 없어, 응답할 JSP 가 없어
+    405: RequestMethod 가 없어
+
+    500: 서버 내부 오류
+]
