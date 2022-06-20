@@ -988,3 +988,56 @@ check, not null, default /   primary key, unique  /   foreign key
 0616[
     model, 매개변수로 전달된 참조변수
 ]
+0617~0620[
+    매개변수 전달과 return
+
+    /*
+        문자열 9791159242045 을 findById() 메서드에
+        전달(주입)하여 findById() 메서드를 실행하고
+        그 결과를 BookVO type 의 bookVO 변수에 받기
+        (findById("9791159242045")를 먼저실행 후 bookVO로)
+    */
+    BookVO bookVO = bookService.findById("9791159242045");
+
+    /*
+        문자열 9791159242045 을 String type 의 isbn 변수에 저장하고
+        isbn 변수에 저장된 값을 findById() 메서드에 전달하고
+        findById() 메서드를 실행하여
+        그 결과를 BookVO type 의 bookVO 변수에 받기   
+    */
+    String isbn = "9791159242045";
+    BookVO bookVO = bookService.findById(isbn);
+
+    // 위의 두 코드는 return 되는 결과가 1개일 것임을 예측
+
+    /*
+        문자열 자바를 findByTitle()메서드에 전달하고
+        그 결과를 BookVO type 의 List 변수 books 에 받기
+    */
+    List<BookVO> books = bookService.findByTitle("자바");
+
+    /*
+        문자열 자바를 String type 의 title 변수에 저장하고
+        title 변수에 저장된 값을 findByTitle() 메서드에 전달하고
+        findByTitle() 메서드를 실행하여 그 결과(return 값)를
+        BookVO type List type 인 books 변수에 받기
+        BookVO Generic type 을 갖는 List type 의 books 변수에 받기
+        <BookVO> 꺽쇠안에 있는게 Generic type
+    */
+    String title = "자바";
+    List<BookVO> books = bookService.findByTitle(title);
+
+
+    public class BookServiceImpl{
+        public List<BookVO> findByTitle(String title){
+            // ....
+            List<BookVO> books = bookDao.findByTitle(title);
+            return books; // 이 값의 type List<BookVO>
+        }
+    }
+]
+
+0620[
+dependencyManagement Spring 의 설정을 통합관
+commons-io, commons-fileupload 파일 업로드를 도와주는 dependency
+]
