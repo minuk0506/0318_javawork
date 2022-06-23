@@ -1066,3 +1066,21 @@ commons-io, commons-fileupload 파일 업로드를 도와주는 dependency
     3. 코딩 전까지는 소요 인력 2배 이상 필요하나 추후 인력 감소로 인해 결과적으로 품질 비용이 감소하고 개발 기간 단축 된다.
     4. 인스펙션 구성원 중 경영자는 제외(표면적 오류만 찾아내려는 경향 발생)
 ]
+0623[
+    Java final 변수, 객체
+    일반적인(POJO) 자바 코드
+    private final BookVO bookVO = new BookVO();
+    private final BookService bookService = new BookServiceImpl();
+    protected final JavaMailSender sender = new avaMailSenderImpl();
+    protected final String strName = '홍길동';
+
+    Spring DI, Ioc 코드
+    private final BookService bookService;
+    protected final JavaMailSender sender;
+    public SendMailServiceImplV1(BookService bookService, JavaMailSender sender){
+    this.sender = sender;
+    this.bookService = bookService;
+    }
+    SpMVC_007_EMSV2 프로젝트
+    FileUpServiceImplV1 만들어 오기
+]
