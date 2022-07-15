@@ -1225,3 +1225,12 @@ commons-io, commons-fileupload 파일 업로드를 도와주는 dependency
     그리고 메서드를 호출하기 위해 필요한 매개 변수를 준비해서 전달하지 않는다. Container 가 개발자 대신 알아서 호출한다.
     5. 개발자가 Container 개념 즉, Spring framework 의 설계를 이해해야 하는 이유는 Container 가 겉으로 드러나지 않기 때문에 처음 Spring 을 접하면 작동 원리를 이해하기 어렵다.
 ]
+0715[
+    관계형 데이터베이스(RDBMS)
+    1. 기본 구성이 Table
+    2. 키(Key)와 값(value)들의 간단한 관계를 테이블화 시킨 매우 간단한 원칙의 데이터베이스
+    각 Table은 Key, Value 쌍으로 데이터 표현
+    3. 데이터간의 종속성을 Relation Ship으로 표현
+    4. 데이터의 완전한 무결성이 보장되어야 하는 곳에서 주로 사용
+    5. 
+]
