@@ -1330,3 +1330,18 @@ commons-io, commons-fileupload 파일 업로드를 도와주는 dependency
     3. 한 Table 의 여러 칼럼에 설정 할 수 있다.
     4. UNIQUE 가 설정된 칼럼은 다른 Table 과 FK 설정을 할 수 있다.
 ]
+0727[
+    Oracle
+    1. Create TableSpace firstDB
+    DataFile 'C:/oraclexe/data/first.dbf'
+    Size 1m AutoExtend On Next 1k;
+    2. Create User user1 Identified By 12341234
+    Default TableSpace firstDB;
+    3. Grant DBA to user1;
+
+    MySQL
+    1. Create DataBase firstDB;
+    2. Use firstDB;
+    3. Create User dbuser@'localhost' identified By '!Korea8080';
+    4. Grant All Privileges On firstDB.* To dbuser@'localhost';
+]
